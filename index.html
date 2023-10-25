@@ -1,0 +1,110 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    .ul
+    {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    }
+    li a
+    {
+    display: block;
+    width: 60px;
+    }
+    </style>
+    <style>
+        .topnav 
+        {
+        background-color: #333;
+        overflow: hidden;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .topnav img
+        {
+            float: left;
+            padding: 14px 16px;
+        }
+        .topnav a 
+        {
+        float: left;
+        color: crimson;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        }
+        /*
+        .topnav a:hover  (hover property specifically=> .topnav a:hover, a.active hover prop. over active class, .topnav a.active spec.active class prop.) 
+        {
+            background-color: crimson;
+            color: black;
+        }
+        */
+        .topnav a.active
+        {
+            background-color: gray;
+            color: crimson;
+        }
+        .topnav a:hover, a.active
+        {
+            background-color: crimson;
+            color: white;
+        }
+        .myDiv p
+        {
+            color: crimson;
+            float: left;
+            text-align: left;
+            padding: 10px 16px;
+            margin: 5px 495px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+    <title>Coca-cola</title>
+    <link rel="stylessheet" href="styles.css">
+    <style>
+        body{background-color: black;}
+        h1{color: crimson; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+    </style>
+</head>
+<body>
+    <h1><em>Coca-cola</em></h1>
+    <div class="topnav">
+        <img src="D:\datafiles\Coding Agglomeration\codeRepository(WebProg.)\mainExerciseWebProg\coca-cola-logo.svg">
+        <a class="active" href="#home">Home</a>
+        <a href="#news">News</a>
+        <a href="#contacts">Contacts</a>
+    </div>
+
+    <script>
+     var navEls = document.getElementsByClassName("topnav");
+
+     for(var i=0; i<navEls.length; i++)
+      {
+      navEls[i].addEventListener("click", function()
+        { 
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace("active", "");
+      this.className += " active";
+        });
+      }
+    </script>
+
+    <div class="myDiv" style="position: relative; right: 487px; top: 8px;">
+      <p><strong>
+        New from Coca-Cola® Creations, look into the year 3000 with 
+        Coca-Cola® Zero Sugar Y3000 – the first limited-edition Coke flavor from the future. 
+        Created to show us an optimistic vision of what’s to come, 
+        where humanity and technology are more connected than ever.
+        For the first time, Coca-Cola® Zero Sugar Y3000 was co-created with artificial intelligence
+        to help bring the flavor of tomorrow to Coke fans. 
+        Taste the Future now. Coca-Cola® Zero Sugar Y3000 will be available
+        for a limited time only, so pick up a Coca-Cola® 
+        Zero Sugar Y3000 and get a glimpse into the future world. ​
+      </strong></p>
+    </div>
+</body>
+</html>
